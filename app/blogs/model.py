@@ -60,7 +60,7 @@ class Blog:
         try:
             db = Postgres.init()
             cursor = Postgres.get_cursor(db, 'realdict')
-            query = "SELECT array_agg(comments ORDER BY timestamp asc) AS comments, section_id FROM comments WHERE blog_id = %(blog_id)s GROUP BY section_id"
+            query = "SELECT array_agg(comment ORDER BY timestamp asc) AS comments, section_id FROM comments WHERE blog_id = %(blog_id)s GROUP BY section_id"
             query_dict = {'blog_id': self.blog_id}
             cursor.execute(query, query_dict)
             result = cursor.fetchall()
