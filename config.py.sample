@@ -1,0 +1,9 @@
+DEBUG = True
+PORT = 8000
+POSTGRES_CREDS = {
+        'USER': 'myuser',
+        'PASSWORD': 'mypassword',
+        'HOST': 'db.host.com',
+        'DATABASE': 'dbname',
+        'ENCODING': 'UTF8'
+        }
